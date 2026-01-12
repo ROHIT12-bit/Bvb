@@ -12,9 +12,6 @@ echo "eula=true" > eula.txt
 # Download Playit
 curl -L https://playit.gg/downloads/playit-linux-amd64 -o playit
 chmod +x playit
-
-# Start Playit tunnel
 ./playit --secret "$PLAYIT_AGENT_KEY" &
 
-# Start Minecraft
 java -Xms512M -Xmx1G -jar server.jar nogui
